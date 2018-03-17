@@ -16,7 +16,7 @@ class SearchItem(unittest.TestCase):
         driver.get("https://www.amazon.de")
         self.assertIn("Amazon.de", driver.title)
         elem = driver.find_element_by_id("twotabsearchtextbox")
-        elem.send_keys("hfjdrnjkdernfjkernfjkernjerkn")
+        elem.send_keys("Batman comics")
         elem.send_keys(Keys.RETURN)
         self.assertTrue(driver.find_element_by_xpath("//ul[@id='s-results-list-atf']//li[@id='result_0']"))
 
