@@ -25,8 +25,9 @@ class SearchItem(unittest.TestCase):
         elem = driver.find_element_by_id("twotabsearchtextbox")
 
         # Search for Batman comics
-        logging.getLogger().info("Search for Batman comics")
-        elem.send_keys("Batman comics")
+        search_string = "Batman comics"
+        logging.getLogger().info('Search for "{0}"'.format(search_string))
+        elem.send_keys(search_string)
         elem.send_keys(Keys.RETURN)
 
         # Check that results number above 0
@@ -59,12 +60,12 @@ class SearchItem(unittest.TestCase):
         logging.getLogger().info('Check that price has EUR postfix')
         self.assertIn("EUR", str_price)
 
-        rating = driver.find_element_by_xpath("//ul[@id='s-results-list-atf']//li[@id='result_0']//span["
-                                              "@class='a-declarative']//span[@class='a-icon-alt']")
-
         # Check that item has rating
         logging.getLogger().info('Check that item has rating')
-        self.assertTrue(rating)
+        self.assertTrue(driver.find_element_by_xpath("//ul[@id='s-results-list-atf']//li[@id='result_0']//span["
+                                              "@class='a-declarative']//span[@class='a-icon-alt']"))
+
+
 
         # Open 1st item page
         logging.getLogger().info('Open 1st item page')
