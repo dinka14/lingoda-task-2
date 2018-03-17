@@ -1,10 +1,10 @@
 # lingoda-task-2
 
 <p>How to run:</p>
-<b>Linux</b>
+<h5>Linux</h5>
 <ul>Python and pip are already installed on Linux </ul>
 <ul>Download and install <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java (JRE)</a></ul>
-<ul>Install selenium</ul>
+<ul>Install selenium using pip</ul>
 
 ```bash
 $ pip install selenium
@@ -33,6 +33,31 @@ total 16
 -rw-rw-r-- 1 denis denis 3929 мар 17 19:21 search.py
 -rw-rw-r-- 1 denis denis 3746 мар 17 19:21 search.pyc
 ```
+
+<h5>Windows</h5>
+<ul>Download and install<a href="http://www.python.org/download">Python 2.7</a></ul>
+<ul>Download and install <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java (JRE)</a></ul>
+<ul>Install selenium using pip</ul>
+
+```bash
+C:\Python27\Scripts\pip.exe install selenium
+```
+
+<ul>Download <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">ChromeDriver</a> archive and unpack it to any directory.</ul>
+<ul>Download <a href="https://www.seleniumhq.org/download/">Selenium server</a> in any directory.</ul>
+
+<ul>Start chrome driver</ul>
+
+```bash
+C:\java -Dwebdriver.chrome.driver=chromedriver.exe -jar selenium-server-standalone-3.9.1.jar
+```
+
+<ul>Download the project from git, put files in one directory and start test</ul>
+
+```bash
+C:\Python27\python.exe C:\lingoda-task-2\runner.py
+```
+
 
 <h5> Test passed: </h5>
 
