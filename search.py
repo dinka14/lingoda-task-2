@@ -9,8 +9,8 @@ logging.getLogger().level = logging.INFO
 stream_handler = logging.StreamHandler(sys.stdout)
 logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
 
-class SearchItem(unittest.TestCase):
 
+class SearchItem(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub',
                                        desired_capabilities=DesiredCapabilities.CHROME)
