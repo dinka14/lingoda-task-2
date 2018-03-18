@@ -14,6 +14,8 @@ class SearchItem(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4444/wd/hub',
                                        desired_capabilities=DesiredCapabilities.CHROME)
+
+    def locators(self):
         self.find_search_field = "twotabsearchtextbox"
         self.search_string = "Batman comics"
         self.find_first_item = "//ul[@id='s-results-list-atf']//li[@id='result_0']"
@@ -30,6 +32,7 @@ class SearchItem(unittest.TestCase):
     def test_search_in_main_page(self):
         stream_handler.stream = sys.stdout
         driver = self.driver
+        self.locators()
 
         logging.getLogger().info("\nGoing to https://www.amazon.de")
         driver.get("https://www.amazon.de")
