@@ -40,7 +40,7 @@ total 16
 <ul>Install selenium using pip</ul>
 
 ```bash
-C:\Python27\Scripts\pip.exe install selenium
+C:\Python27\Scripts>pip.exe install selenium
 ```
 
 <ul>Download <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">ChromeDriver</a> archive and unpack it to any directory.</ul>
@@ -49,7 +49,7 @@ C:\Python27\Scripts\pip.exe install selenium
 <ul>Start chrome driver</ul>
 
 ```bash
-C:\java -Dwebdriver.chrome.driver=chromedriver.exe -jar selenium-server-standalone-3.9.1.jar
+C:\>java -Xmx2048m -jar c:\selenium-server-standalone-2.53.1.jar -Dwebdriver.chrome.driver="C:\chromedriver.exe"
 ```
 
 <ul>Download the project from git, put files in one directory and start test</ul>
